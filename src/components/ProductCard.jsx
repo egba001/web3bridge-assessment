@@ -1,8 +1,14 @@
 import PropTypes from "prop-types"
+import { CartContext } from "../context/CartContext";
+import { useContext } from 'react'
+
 const ProductCard = ({ title, price, image }) => {
+
+    // const { addToCart } = useContext(CartContext);
+
     return (
-        <div>
-            <img src={image} alt={title} />
+        <div className="p-2 rounded-md border">
+            <img src={image} alt={title} width="110" />
             <div className="text-black">
                 <h2>{title}</h2>
                 <p>{price}</p>
